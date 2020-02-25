@@ -10,7 +10,19 @@ public class IntArrayWorker
   {
     matrix = theMatrix;
   }
-  
+  public int getCount(int n)
+  {
+    int count = 0;
+    for(int r=0; r<matrix.length; r++)
+    {
+        for(int c=0; c<matrix[r].length; c++)
+        {
+            if(matrix[r][c] == n)
+            count ++;
+        }
+    }
+    return count;
+  }
   /**
    * Method to return the total 
    * @return the total of the values in the array
