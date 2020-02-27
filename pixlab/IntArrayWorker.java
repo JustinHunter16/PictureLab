@@ -13,15 +13,38 @@ public class IntArrayWorker
   public int getCount(int n)
   {
     int count = 0;
-    for(int r=0; r<matrix.length; r++)
+    for(int r = 0; r < matrix.length; r++)
     {
-        for(int c=0; c<matrix[r].length; c++)
+        for(int c = 0; c < matrix[r].length; c++)
         {
             if(matrix[r][c] == n)
             count ++;
         }
     }
     return count;
+  }
+  public int getLargest()
+  {
+      int max = matrix[0][0];
+      for(int i = 0; i < matrix.length; i++)
+      {
+          for(int j = 0; j < matrix[i].length; j++)
+          {
+              if(matrix[i][j] > max)
+              max = matrix[i][j];
+          }
+      }
+      return max;
+  }
+  public int getColTotal(int n)
+  {
+      int sum = 0;
+      for(int i = 0; i < matrix.length; i++)
+      {
+          if(matrix[i].length >= n + 1)
+          sum += matrix[i][n];
+      }
+      return sum;
   }
   /**
    * Method to return the total 
