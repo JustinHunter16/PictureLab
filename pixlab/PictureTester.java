@@ -89,7 +89,7 @@ public class PictureTester
      snowman.explore();
   }
   
-   public static void testMirrorGull()
+  public static void testMirrorGull()
   {
      Picture seagull = new Picture("seagull.jpg");
      seagull.explore();
@@ -103,7 +103,18 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
-  
+ 
+  public static void testCopy(Picture fromPic, int fromStartRow, int fromStartCol,
+                   int fromEndRow, int fromEndCol, int toStartRow,
+                   int toStartCol)
+  {
+     Picture seagull = new Picture("seagull.jpg");
+     seagull.explore();
+     seagull.copy(fromPic,fromStartRow, fromStartCol,
+                   fromEndRow, fromEndCol, toStartRow,
+                   toStartCol);
+     seagull.explore();
+  }
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -132,7 +143,7 @@ public class PictureTester
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
